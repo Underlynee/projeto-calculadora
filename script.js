@@ -2,7 +2,7 @@
 // 1. Criar um array para guardar os valores OK.
 // 2. Adicionar valores nos botões OK.
 // 3. Mostrar os valores no ecrã OK.
-// 4. Fazer as contas
+// 4. Fazer as contas OK
 // 5. Mostrar o resultado no ecrã
 // 6. Dar a função dos operadores
 // 7. Limpar o ecrã
@@ -56,28 +56,40 @@ botaoOperador = document.querySelectorAll('.operator');
 
             } else if (click === '='){
 
+                if (valorCalculadora.length <= 1) {
+                    return;
+                }
                 let resultado = eval(valorCalculadora.join(''));
                 tela.value = resultado;
+                 let historico = document.querySelector('.historico-lista');
+                historico.innerHTML += ("<p>" + valorCalculadora.join('') + " = " + resultado + "</p>");
                 valorCalculadora = [];
                 valorCalculadora.push(resultado);
                 let calculo = resultado;
                 console.log(calculo);
 
             } else if (click === 'c') {
-
+                
                 tela.value = ('');
+                historico = document.querySelector('.historico-lista');
+                historico.innerHTML = ('');
                 valorCalculadora = [];
                 console.log('Limpo');
-
                 
+
+            } else if (click === '<') {
+                
+                  
+                 tela.value = tela.value.slice(0, -1);
+                 valorCalculadora = valorCalculadora.slice(0, -1);
+                 historico = document.querySelector('.historico-lista');
+                 historico.innerHTML = historico.innerHTML.slice(0, -1);
+                 console.log('Limpo');
+
             }})});
 
 };
-                // BOTAO DE EXCLUIR UM CARACTERE
-                // tela.value = tela.value.slice(0, -1);
-                // valorCalculadora = valorCalculadora.slice(0, -1);
-                // console.log('Limpo');
-
+               
     
 
 
