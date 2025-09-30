@@ -40,7 +40,7 @@ buttonsNumeros = document.querySelectorAll('.numeros');
 
 function operadores() {
 
-botaoOperador = document.querySelectorAll('.operator');
+    botaoOperador = document.querySelectorAll('.operator');
     botaoOperador.forEach(botaoOperador => {
         botaoOperador.addEventListener('click', eventoOperador => {
             let click = eventoOperador.target.innerText;
@@ -53,12 +53,13 @@ botaoOperador = document.querySelectorAll('.operator');
                 tela.value += click;
                 console.log(click);
 
-
+                // verificar se há um operador para realizar a operação
             } else if (click === '='){
-
-                if (valorCalculadora.length <= 1) {
+                if (!valorCalculadora.some(v => v === '+' || v === '-' || v === '*' || v === '/')) {
+                    console.log(valorCalculadora);
                     return;
-                }
+                    
+                }   
                 let resultado = eval(valorCalculadora.join(''));
                 tela.value = resultado;
                  let historico = document.querySelector('.historico-lista');

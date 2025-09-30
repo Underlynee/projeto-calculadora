@@ -1,5 +1,5 @@
  
- body 
+ .body 
  
  {
             display: flex;
@@ -11,7 +11,7 @@
         }
         .calculator {
             background-color: #fff;
-            padding: 20px;
+            padding: 30px 40px 20px 30px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
@@ -51,7 +51,7 @@
 .historico-box {
     background: #fff;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);   
     padding: 20px;
     min-width: 200px;
     min-height: 420px;
@@ -71,4 +71,35 @@
     word-break: break-all;
 }
 
+
+@media (max-width:1080px) {
+
+    .body {
+
+        display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 90vh;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+    }
+
+    
+    .container {
+        
+        flex-direction: column;
+        align-items: center;
+    
+        
+    }
+
+    .historico-box {
+        
+        align-items: center;
+        margin: 10%;
+    }
+
+
+    
+}
     
