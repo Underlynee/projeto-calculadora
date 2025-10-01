@@ -71,35 +71,67 @@
     word-break: break-all;
 }
 
+button:hover {
+    background-color: #f9a825;
+    transform: scale(1.05);
+    transition: background 0.2s, transform 0.2s;
+}
 
-@media (max-width:1080px) {
+button.operator:hover {
+    background-color: #eee;
+    transform: scale(1.05);
+    transition: background 0.2s, transform 0.2s;
+    color: #333;
+}
 
-    .body {
 
-        display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 90vh;
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+@media (max-width:480px) {
+ 
+
+    .calculator {
+        width: 40vw;
+        padding: 20px 22px;
+        padding-right: 30px;    
+        box-sizing: border-box;
+    }   
+
+    input[type="text"] {
+        height: 40px;
+        font-size: 18px;
+        margin-bottom: 8px;
+        padding: 5px;
     }
 
-    
-    .container {
+    .buttons {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 6px;
         
-        flex-direction: column;
-        align-items: center;
-    
-        
+    }
+
+    button {
+        height: 40px;
+        font-size: 16px;
+        padding: 12px;
     }
 
     .historico-box {
+        min-width: 25vw;
+        min-height: 290px;
+        margin: 20px;
+        padding: 15px;
         
-        align-items: center;
-        margin: 10%;
+        
     }
 
+    .historico-titulo {
+        font-size: 18px;
+        margin-bottom: 6px;
+        
+    }
 
-    
+    .historico-lista {
+        font-size: 14px;
+    }
 }
+    
     

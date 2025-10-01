@@ -1,21 +1,9 @@
-// CONSTRUIR UMA CALCULADORA
-// 1. Criar um array para guardar os valores OK.
-// 2. Adicionar valores nos botões OK.
-// 3. Mostrar os valores no ecrã OK.
-// 4. Fazer as contas OK
-// 5. Mostrar o resultado no ecrã
-// 6. Dar a função dos operadores
-// 7. Limpar o ecrã
-// 8. Limpar o array
-// BÓNUS: Fazer a calculadora funcionar com o teclado (já n sei)
-
-    
 
 let valorCalculadora = [];
 
 
-numeros()
-operadores()
+numeros();
+operadores();
 
 
 let tela = document.getElementById('display');
@@ -36,6 +24,18 @@ buttonsNumeros = document.querySelectorAll('.numeros');
     });
 });
 }
+
+
+function comTeclado() {
+
+
+    digitarNaTela.addEventListener('keydown', evento => {
+        let tecla = evento.key;
+        let digitarNaTela = document.querySelector('tela').removeAttribute('disabled')
+   
+
+    })};
+    
 
 
 function operadores() {
